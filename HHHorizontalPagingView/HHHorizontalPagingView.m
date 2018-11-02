@@ -45,15 +45,13 @@ static NSInteger kPagingButtonTag                 = 1000;
                                         headerHeight:(CGFloat)headerHeight
                                       segmentButtons:(NSArray *)segmentButtons
                                        segmentHeight:(CGFloat)segmentHeight
-                                        contentViews:(NSArray *)contentViews {
+                                        contentViews:(NSArray *)contentViews
+                                               frame:(CGRect)frame {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.minimumLineSpacing          = 0.0;
     layout.minimumInteritemSpacing     = 0.0;
     layout.scrollDirection             = UICollectionViewScrollDirectionHorizontal;
-    
-    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    HHHorizontalPagingView *pagingView = [[HHHorizontalPagingView alloc] initWithFrame:CGRectMake(0., 0., [[UIScreen mainScreen] bounds].size.width, screenHeight>= 812? (screenHeight-88-49-34):(screenHeight-64-49))];
-    
+    HHHorizontalPagingView *pagingView = [[HHHorizontalPagingView alloc] initWithFrame:frame];
     pagingView.horizontalCollectionView = [[UICollectionView alloc] initWithFrame:pagingView.bounds collectionViewLayout:layout];
     [pagingView.horizontalCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kPagingCellIdentifier];
     pagingView.horizontalCollectionView.backgroundColor                = [UIColor clearColor];

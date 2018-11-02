@@ -68,8 +68,8 @@
                                         headerHeight:(CGFloat)headerHeight
                                       segmentButtons:(NSArray *)segmentButtons
                                        segmentHeight:(CGFloat)segmentHeight
-                                        contentViews:(NSArray *)contentViews;
-
+                                        contentViews:(NSArray *)contentViews
+                                               frame:(CGRect)frame;
 /**
  *  手动控制滚动到某个视图
  *
