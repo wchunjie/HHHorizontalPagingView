@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong, readwrite) UIView  *segmentView;
 
-@property (nonatomic, strong) UICollectionView   *horizontalCollectionView;
 
 @property (nonatomic, weak)   UIScrollView       *currentScrollView;
 @property (nonatomic, strong) NSLayoutConstraint *headerOriginYConstraint;

@@ -46,6 +46,13 @@
  */
 @property (nonatomic, copy) void (^scrollViewDidScrollBlock)(CGFloat offset);
 
+
+/**
+ 内容视图
+ */
+@property (nonatomic, strong) UICollectionView   *horizontalCollectionView;
+
+
 /**
  *  实例化横向分页控件
  *
