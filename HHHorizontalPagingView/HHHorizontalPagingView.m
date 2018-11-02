@@ -52,7 +52,8 @@ static NSInteger kPagingButtonTag                 = 1000;
     layout.minimumInteritemSpacing     = 0.0;
     layout.scrollDirection             = UICollectionViewScrollDirectionHorizontal;
     
-    HHHorizontalPagingView *pagingView = [[HHHorizontalPagingView alloc] initWithFrame:CGRectMake(0., 0., [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    HHHorizontalPagingView *pagingView = [[HHHorizontalPagingView alloc] initWithFrame:CGRectMake(0., 0., [[UIScreen mainScreen] bounds].size.width, screenHeight>= 812? (screenHeight-88-49-34):(screenHeight-64-49))];
     
     pagingView.horizontalCollectionView = [[UICollectionView alloc] initWithFrame:pagingView.bounds collectionViewLayout:layout];
     [pagingView.horizontalCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kPagingCellIdentifier];
